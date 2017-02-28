@@ -1,0 +1,22 @@
+{
+   "$schema": "rackhd-task-schema.json",
+   "copyright": "Copyright 2017, DELL EMC, Inc.",
+   "title": "Install ScaleIO",
+   "description": "The schema for Installing ScaleIO",
+   "describeJob": "Job.Install.ScaleIo",
+   "allOf": [
+       { "$ref": "common-task-options.json#/definitions/Options" },
+       {
+           "type": "object",
+           "properties": {
+                "command": {
+                   "description": " Command to copy ScaleIO image to node",
+                   "type": "string"
+                }
+            },
+           "required": [
+               "command"
+            ]
+       }
+   ]
+}
