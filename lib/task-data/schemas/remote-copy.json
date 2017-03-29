@@ -1,38 +1,28 @@
 {
-   "$schema": "rackhd-task-schema.json",
-   "copyright": "Copyright 2017, DELL EMC, Inc.",
-   "title": "Remote Copy File",
-   "description": "The schema for copying file remotely",
-   "describeJob": "Job.Remote.Copy",
-   "allOf": [
-       { "$ref": "common-task-options.json#/definitions/Options" },
-       {
-           "type": "object",
-           "properties": {
-                "file": {
-                   "description": "File including the path to be copied to node",
-                   "type": "string"
-                },
-                "path": {
-                   "description": "Destination location of the file to be copied",
-                   "type": "string"
-                },
-                "username": {
-                   "description": "Remote host username",
-                   "type": "string"
-                },
-                "password": {
-                   "description": "Remote host password",
-                   "type": "string"
-                },
-                "host": {
-                   "description": "Remote host IP address",
-                   "type": "string"
-                }
-            },
-           "required": [
-               "file", "path", "username", "password", "host"
-            ]
-       }
-   ]
+    "copyright": "Copyright 2017, DELL EMC, Inc.",
+    "properties": {
+        "file": {
+           "description": "File including the path to be copied to node",
+           "type": "string"
+        },
+        "path": {
+           "description": "Destination location of the file to be copied",
+           "type": "string"
+        },
+        "username": {
+           "description": "Remote host username",
+           "type": "string"
+        },
+        "password": {
+           "description": "Remote host password",
+           "type": "string"
+        },
+        "host": {
+           "description": "Remote host IP address",
+           "type": "string"
+        }
+    },
+    "required": [
+        "file", "path", "username", "password", "host"
+    ]
 }
